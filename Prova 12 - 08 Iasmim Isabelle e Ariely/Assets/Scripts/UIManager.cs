@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,5 +22,14 @@ public class UIManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI acertouTexto;
     [SerializeField] TextMeshProUGUI errouTexto;
 
+    private void Start()
+    {
+        for (int i = 0; i < botoes.Length; i ++)
+        {
+            int x = i;
 
+            //Button + Listener
+            botoes[i].onClick += GameManager.ChecarCor(x);
+        }
+    }
 }
