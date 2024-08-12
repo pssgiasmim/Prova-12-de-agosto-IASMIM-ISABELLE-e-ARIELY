@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -39,10 +41,26 @@ public class GameManager : MonoBehaviour
             sequencia[i] = Random.Range(0, nomes.Length);
         }
 
+        UIManager.instance.AtualizarSequencia(nomes[sequencia[i]]);
     }
 
     public void ChecarCor( int corIndex)
     {
+        if (corIndex == sequencia[corDaVez])
+        {
+            corDaVez++;
+        }
+
+        if (corDaVez == sequencia.Length)
+        {
+            acertos++;
+
+            UIManager.instance.AtualizarAcertos(acertos);
+
+            GerarSequencia();
+        }
+        
+        else if ()
 
     }
 
