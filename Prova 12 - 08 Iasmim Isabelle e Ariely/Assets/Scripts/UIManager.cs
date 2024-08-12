@@ -43,7 +43,10 @@ public class UIManager : MonoBehaviour
         UIManager.instance.AtualizarErros(errouTexto);
    }
 
-   
+   public void LimparTexto(string v)
+   {
+        UIManager.instance.LimparTexto(sequenciaTexto.ToString());
+   }
 }
 
 
