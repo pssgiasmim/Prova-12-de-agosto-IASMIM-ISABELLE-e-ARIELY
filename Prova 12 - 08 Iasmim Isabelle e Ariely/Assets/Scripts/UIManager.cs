@@ -47,6 +47,12 @@ public class UIManager : MonoBehaviour
    {
         UIManager.instance.LimparTexto(sequenciaTexto.ToString());
    }
+
+    public void AtualizarSequencia(string cor)
+    {
+        cor += UIManager.instance.sequenciaTexto;
+    }
+
 }
 
 
