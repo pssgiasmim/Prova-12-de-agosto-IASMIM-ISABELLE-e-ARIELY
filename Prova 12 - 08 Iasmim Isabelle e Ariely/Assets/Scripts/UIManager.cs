@@ -29,23 +29,23 @@ public class UIManager : MonoBehaviour
             int x = i;
 
             
-            botoes[i].onClick += GameManager.ChecarCor(x);
+            botoes[i].onClick += GameManager.instance.ChecarCor(x);
         }
     }
 
-   public void AtualizarAcertos(TextMeshProUGUI acertouTexto)
+   public void AtualizarAcertos(int acertos)
    {
         
        acertouTexto.text = "acertou".ToString();
    }
 
-   public void AtualizarErros(TextMeshProUGUI errouTexto)
+   public void AtualizarErros(int errou)
    {
         
         errouTexto.text = "errou".ToString();
    }
 
-   public void LimparTexto(string v)
+   public void LimparTexto(string i)
    {
         UIManager.instance.LimparTexto(sequenciaTexto.ToString());
    }
