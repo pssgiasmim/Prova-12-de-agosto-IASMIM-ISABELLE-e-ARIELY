@@ -45,14 +45,14 @@ public class UIManager : MonoBehaviour
         errouTexto.text = "errou".ToString();
    }
 
-   public void LimparTexto(string i)
+   public void LimparTexto()
    {
-        UIManager.instance.LimparTexto(sequenciaTexto.ToString());
+        sequenciaTexto.text = " ";
    }
 
     public void AtualizarSequencia(string cor)
     {
-        cor += UIManager.instance.sequenciaTexto;
+        sequenciaTexto.text += cor + " ";
     }
 
 }
