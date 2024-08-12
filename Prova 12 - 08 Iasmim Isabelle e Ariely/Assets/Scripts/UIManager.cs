@@ -32,4 +32,11 @@ public class UIManager : MonoBehaviour
             botoes[i].onClick += GameManager.ChecarCor(x);
         }
     }
+
+   public void AtualizarAcertos(TextMeshProUGUI acertouTexto)
+   {
+        UIManager.instance.AtualizarAcertos(acertouTexto);
+   }
 }
+
+
