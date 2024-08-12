@@ -37,6 +37,13 @@ public class UIManager : MonoBehaviour
    {
         UIManager.instance.AtualizarAcertos(acertouTexto);
    }
+
+   public void AtualizarErros(TextMeshProUGUI errouTexto)
+   {
+        UIManager.instance.AtualizarErros(errouTexto);
+   }
+
+   
 }
 
 
