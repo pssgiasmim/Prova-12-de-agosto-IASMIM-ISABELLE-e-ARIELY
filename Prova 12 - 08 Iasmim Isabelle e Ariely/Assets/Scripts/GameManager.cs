@@ -39,9 +39,11 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < sequencia.Length; i++)
         {
             sequencia[i] = Random.Range(0, nomes.Length);
+
+            UIManager.instance.AtualizarSequencia(nomes[sequencia[i]]);
         }
 
-        UIManager.instance.AtualizarSequencia(nomes[sequencia[i]]);
+      
     }
 
     public void ChecarCor( int corIndex)
