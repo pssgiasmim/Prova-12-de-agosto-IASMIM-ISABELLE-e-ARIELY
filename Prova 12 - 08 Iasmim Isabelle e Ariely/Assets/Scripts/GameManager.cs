@@ -55,12 +55,19 @@ public class GameManager : MonoBehaviour
         {
             acertos++;
 
-            UIManager.instance.AtualizarAcertos(acertos);
+            UIManager.instance.AtualizarAcertos();
 
             GerarSequencia();
         }
         
-        else if ()
+        else if (corDaVez == sequencia.Length)
+        {
+            erros++;
+
+            UIManager.instance.AtualizarErros();
+        }
+
+        GerarSequencia();
 
     }
 
