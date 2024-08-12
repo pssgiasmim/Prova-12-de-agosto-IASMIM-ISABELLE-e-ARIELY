@@ -29,7 +29,7 @@ public class UIManager : MonoBehaviour
             int x = i;
 
             
-            botoes[i].onClick += GameManager.instance.ChecarCor(x);
+            botoes[i].onClick.AddListener(() => GameManager.instance.ChecarCor(x));
         }
     }
 
